@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeacherDashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <h1>EduTrack</h1>
+    </div>
+    <div class="navbar-middle">
+      <input type="text" id="companyName" placeholder="Enter Company Name">
+      <select id="courseName">
+        <option value="C">C</option>
+        <option value="DSA">DSA using C</option>
+        <option value="SQL">SQL</option>
+        <option value="Java">Java</option>
+        <option value="MERN">MERN Stack</option>
+        <option value="ML">DataScience and Machine Learning</option>
+      </select>
+    </div>
+    <div class="navbar-right">
+      <div class="profile">
+        <img src="placeholder-profile.png" alt="Teacher Profile" id="profileImage">
+        <input type="file" id="profileUpload" accept="image/*" hidden>
+        <button id="uploadButton">Upload Image</button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="dashboard-content">
+      <h2>Dashboard</h2>
+      <p>Welcome to the Teacher Dashboard. Use the filters above to customize your view.</p>
+    </section>
+    <section class="students-list">
+      <h2>Students List</h2>
+      <select id="batchSelect">
+        <option value="terv">Terv</option>
+        <option value="consensus">Consensus</option>
+      </select>
+      <ul id="studentNames">
+        <!-- Student names will be dynamically loaded here -->
+      </ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

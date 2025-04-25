@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEC Dashboard</title>
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    margin-left: 50%;
+    align-items: end;
+    text-align: end;
+    color: white;
+    text-decoration: none;
+}
+
+.welcome-section {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+#Attendance{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#Sylabus{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#CIA{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#Notes{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.clarity{
+    
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        text-decoration: none;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.load-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+#par{
+    margin-left: 150px;
+}
+#ie{
+    margin-left: 450px;
+}
+a{
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MEC</div><br>
+            <ul>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="Attendance.html">Attendance</a></li>
+                <li><a href="Sylabus.html">Syllabus</a></li>
+                <li><a href="CIA.html">CIA</a></li>
+                <li><a href="Notes.html">Notes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1>Hi Thasleema R</h1>
+            <p>Welcome to Mec! Let's Prepare, Practice, and Perform!</p>
+        </section>
+
+        <section class="stats">
+            <a href="Attendance.html" id="Attendance">
+                <div >
+                     <p>Attendance</p>
+                </div>
+            </a>
+            <a href="Sylabus.html"id="Sylabus">
+            <div >
+                <p>Sylabus</p>
+            </div></a>
+            <a href="CIA.html"id="CIA">
+            <div class="stat-box">
+                <p>CIA Marks</p>
+            </div></a>
+            <a href="Notes.html"id="Notes">
+            <div class="stat-box">
+               <p>Notes</p>
+            </div></a>
+        </section>
+        <section class="clarity">
+            <div id="par">
+                <h1>Are You Looking For Your Future?</h1>
+                <p> Let's Set Goals, Take Action, Celebrate!</p>
+            </div>
+            <div id="ie"><br>
+                <a href="introvert.html">FOR INTROVERTS</a><br><br>
+                <a href="extrovert.html">FOR EXTROVERTS</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 MEC. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>

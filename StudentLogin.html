@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #f44336;
+}
+
+.success {
+    background-color: #e8f5e9;
+    color: #4CAF50;
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Student Login</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" name="studentId" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" href="Dashboard.html">Login</button>
+            </div>
+            <div class="form-footer">
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+                <a href="signup.html" id="register">New Student? Register</a>
+            </div>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const studentId = document.getElementById('studentId').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ Rollno: studentId, password }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Login successful! Redirecting...');
+        window.location.href = 'dashboard.html'; // Replace with the desired file
+      } else {
+        alert(result.error || 'Invalid Student ID or Password.');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('Failed to login. Please try again.');
+    }
+  });
+  
+    </script>
+</body>
+</html>
